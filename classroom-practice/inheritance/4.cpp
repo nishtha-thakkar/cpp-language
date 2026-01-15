@@ -101,13 +101,143 @@ class causalShoes : public sportShoes {
     }
 };
 
+// int main(){
+//     causalShoes s;
+//     s.wear();
+//     s.spor();
+//     s.cau();
+    
+// }
+
+
+// Multiple inheritance  - many parent -> one children
+
+class Color {
+    public:
+    void show3(){
+        cout << "parent-1" <<endl;
+
+    }
+};
+
+class Fruit{
+    public:
+    void show4(){
+        cout << "parent-2" << endl;
+    }
+};
+
+// one child
+
+class Redapple: public Color, public Fruit{
+    public:
+    void show5(){
+        cout << "children of parents";
+    }
+};
+
+// int main(){
+//     Redapple r;
+//     r.show3();
+//     r.show4();
+//     r.show5();
+   
+    
+// }
+
+
+
+
+// hybrid inheritance -
+
+//Hybrid = Mix  So,Hybrid inheritance = mix of inheritance types
+
+// Grandfather
+//      ↓
+//    Father
+//    ↓    ↓
+//  Son1  Son2
+
+//C++ class example (simple)
+// Color → Apple → RedApple
+//              → GreenApple
+
+
+// Color = parent
+
+// Apple = child
+
+// RedApple, GreenApple = grandchildren
+
+
+// Animal
+//    ↓
+//  Mammal
+//  ↓     ↓
+// Dog   Cat
+// Animal → Mammal → Dog → multilevel
+
+// Mammal → Dog, Cat → hierarchical
+
+
+///Together = HYBRID INHERITANCE
+
+
+// first i make  Parent → Child → Grandchild 
+
+// parent
+class Games{
+    public:
+    void play1(){
+        cout << "parent" <<endl;
+    }
+
+};
+
+class Cricket : public Games{
+    public:
+    void play2(){
+        cout << "child of parent means child of games" << endl;
+    }
+
+
+};
+
+class player : public Cricket{
+    public:
+    void play3(){
+        cout << " grand child of games means child of cricket" <<endl;
+    }
+
+     void play4(){
+        cout << " grand child of games means child of cricket" <<endl;
+    }
+    };
+
+
+// class player2 : public Cricket{
+//     public:
+//     void play4 (){
+//         cout << "2. grand child of games means 2 child of cricket";
+//     }
+// };
+
+
 int main(){
-    causalShoes s;
-    s.wear();
-    s.spor();
-    s.cau();
+    player p;
+    p.play1();
+    p.play2();
+    p.play3();
+    p.play4();
     
 }
+
+
+
+
+
+
+
 
 
 
